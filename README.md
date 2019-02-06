@@ -1,2 +1,1 @@
-# my_blog1.0
-Blog
+# personal_blog
