@@ -113,8 +113,11 @@
               image.setAttribute('src', value.image);
 
               var name = document.createTextNode(value.name);
+              
+              var description = document.createTextNode(value.description)
 
               footer.appendChild(name);
+              footer.appendChild(description);
               body.appendChild(image);
               panel.appendChild(body);
               panel.appendChild(footer);

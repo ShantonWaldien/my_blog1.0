@@ -8,8 +8,22 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
     <style>
-        body { padding-top:15px; background-color: #ccc;}
-        img { width: 100%;}
+
+        .landing {
+            height: 100vh;
+            background-image: url('https://images.pexels.com/photos/801863/pexels-photo-801863.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+            background-size: cover;
+            
+        }
+
+        body { 
+            padding: 0; 
+            background-color: red;
+        }
+
+        img {
+            width: 100%;
+        }
         
     </style>
 
@@ -20,13 +34,13 @@
 
     <% include partials/menu %>
 
-    <div class="container-fluid bg-3 text-center">  
+    <div class="container-fluid bg-3 text-center landing">  
 
-        <h3><%= page %></h3><br>
+        <h1>Welcome</h1>
 
         <div class="row">
 
-            <div class="col-sm-4">
+            <!-- <div class="col-sm-4">
 
                 <img src="https://famous-mathematicians.com/images/albert-einstein.jpg" alt="">
 
@@ -44,7 +58,7 @@
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF5cUPyfgDMHqwZmHw5JjVK5GS6lJFJS0Y6W_Q_ypJdXjHETjv" alt="">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-            </div>
+            </div> -->
 
         </div>
 
