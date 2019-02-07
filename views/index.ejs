@@ -6,23 +6,44 @@
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Staatliches|Ubuntu" rel="stylesheet">
 
     <style>
 
         .landing {
-            height: 100vh;
+            height: 60vh;
             background-image: url('https://images.pexels.com/photos/801863/pexels-photo-801863.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
             background-size: cover;
-            
+            background-attachment: fixed;
+            background-color: grey !important;
+            background-blend-mode: multiply !important;
+            background-position-y: -200px !important;
         }
 
         body { 
-            padding: 0; 
+            padding: 0 !important; 
             background-color: red;
+            font-family: 'Ubuntu', sans-serif !important; 
         }
 
         img {
             width: 100%;
+        }
+
+        h1 {
+            color: White !important;
+            letter-spacing: 7px !important;
+            font-size: 50px !important;
+        }
+
+        h2 {
+            color: white !important;
+            font-size: 30px !important;
+            letter-spacing: 7px !important;
+        }
+
+        .container-fluid {
+            padding: 200px 0 !important;
         }
         
     </style>
@@ -36,33 +57,35 @@
 
     <div class="container-fluid bg-3 text-center landing">  
 
-        <h1>Welcome</h1>
+        <h1 class="welcome">Welcome</h1>
 
-        <div class="row">
+        <h2>To</h2>
 
-            <!-- <div class="col-sm-4">
-
-                <img src="https://famous-mathematicians.com/images/albert-einstein.jpg" alt="">
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            
-            </div>
-            <div class="col-sm-4"> 
-
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/GodfreyKneller-IsaacNewton-1689.jpg/220px-GodfreyKneller-IsaacNewton-1689.jpg" alt="" height="500px" width="800px">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-            </div>
-            <div class="col-sm-4"> 
-
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF5cUPyfgDMHqwZmHw5JjVK5GS6lJFJS0Y6W_Q_ypJdXjHETjv" alt="">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-            </div> -->
-
-        </div>
+        <h1 style="letter-spacing: 10px !important;font-family: 'Staatliches', cursive !important;">Midnight Club</h1>
 
     </div> 
+
+    <div class="col-sm-4">
+
+        <img src="https://famous-mathematicians.com/images/albert-einstein.jpg" alt="">
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    
+    </div>
+    <div class="col-sm-4"> 
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/GodfreyKneller-IsaacNewton-1689.jpg/220px-GodfreyKneller-IsaacNewton-1689.jpg" alt="" height="500px" width="800px">
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+    </div>
+    <div class="col-sm-4"> 
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF5cUPyfgDMHqwZmHw5JjVK5GS6lJFJS0Y6W_Q_ypJdXjHETjv" alt="">
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+    </div>
 
 <!-- <div class="container">
     <div class="panel panel-danger">
