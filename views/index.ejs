@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Staatliches|Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Denk+One|Roboto" rel="stylesheet">
 
     <style>
 
@@ -23,7 +25,7 @@
         body { 
             padding: 0 !important; 
             background-color: red;
-            font-family: 'Ubuntu', sans-serif !important; 
+            font-family: 'Roboto', sans-serif !important; 
         }
 
         img {
@@ -45,6 +47,18 @@
         .container-fluid {
             padding: 200px 0 !important;
         }
+
+        img:hover {
+            transform: scale(1.1);
+            transition: all 0.3s;
+        }
+        
+
+        .col-sm-4 {
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
         
     </style>
 
@@ -55,37 +69,50 @@
 
     <% include partials/menu %>
 
+    <!-- Landing Page  -->
+
     <div class="container-fluid bg-3 text-center landing">  
 
         <h1 class="welcome">Welcome</h1>
 
         <h2>To</h2>
 
-        <h1 style="letter-spacing: 10px !important;font-family: 'Staatliches', cursive !important;">Midnight Club</h1>
+        <h1 style="letter-spacing: 10px !important;font-family: 'Denk One', sans-serif !important;">Midnight Club</h1>
 
     </div> 
 
-    <div class="col-sm-4">
+    <!-- Featured Posts -->
 
-        <img src="https://famous-mathematicians.com/images/albert-einstein.jpg" alt="">
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <h1 style="color: black !important; text-align: center !important;font-size: 30px !important;letter-spacing: 0px !important;">Featured Posts</h1>
     
-    </div>
-    <div class="col-sm-4"> 
 
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/GodfreyKneller-IsaacNewton-1689.jpg/220px-GodfreyKneller-IsaacNewton-1689.jpg" alt="" height="500px" width="800px">
+    <div class="col-sm-4 col-centered" style="padding: 10px;">
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-    </div>
-    <div class="col-sm-4"> 
-
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF5cUPyfgDMHqwZmHw5JjVK5GS6lJFJS0Y6W_Q_ypJdXjHETjv" alt="">
+        <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
 
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
+        
     </div>
+
+    <div class="col-sm-4 col-centered" style="padding: 10px;">
+
+        <img src="https://images.pexels.com/photos/1449795/pexels-photo-1449795.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            
+    </div>
+
+    <div class="col-sm-4 col-centered" style="padding: 10px;">
+
+        <img src="https://images.pexels.com/photos/1047940/pexels-photo-1047940.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+            
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                
+    </div>
+
+    
+
+    
 
 <!-- <div class="container">
     <div class="panel panel-danger">
