@@ -1,68 +1,25 @@
 {
   "pokemon": [
     {
-      "id": 1,
-      "title": "Pikachu",
-      "image": "https://res.cloudinary.com/teepublic/image/private/s---Orh_gAT--/t_Preview/b_rgb:ffffff,c_limit,f_jpg,h_630,q_90,w_630/v1489813788/production/designs/1332589_1.jpg"
-    },
-    {
-      "id": 2,
-      "title": "Onix",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBoLScQ5igXWG_2wLiHz6OXMAzb4ET_oU1hnBLWa0ZzYr8efgw9Q"
-    },
-    {
-      "id": 3,
-      "title": "Steelix",
-      "image": "https://pmg.gishan.cc/static/i/p/steelix.jpg"
-    },
-    {
-      "id": 4,
-      "title": "Rayquaza",
-      "image": "https://cdn.bulbagarden.net/upload/thumb/f/f3/Rayquaza_Brawl.png/200px-Rayquaza_Brawl.png"
-    },
-    {
-      "id": 5,
-      "title": "Snorlax",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcaqtGZZ36DH0M0ouhxqiknHPqaQk8MyJLJkUToML4EPvORZcK"
-    },
-    {
-      "id": 6,
-      "title": "Gyarados",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT91mLdMoyyAgHsyOvwd3Orl9qfR6ViAnz-YRg1iOmiJWvGHYMs"
-    },
-    {
-      "id": 7,
-      "title": "Wailord",
-      "image": "https://vignette.wikia.nocookie.net/pkmnshuffle/images/8/89/Wailord.png/revision/latest?cb=20170407224654"
-    },
-    {
-      "id": 8,
-      "title": "Milotic",
-      "image": "https://t3.rbxcdn.com/7700ea7817884865b9c7fc0666c484a8"
-    },
-    {
-      "id": 9,
-      "title": "Giratina",
-      "image": "https://vignette.wikia.nocookie.net/pokemongo/images/9/92/Giratina.png/revision/latest?cb=20181211051155"
-    },
-    {
-      "id": 10,
-      "title": "Ditto",
-      "image": "https://vignette.wikia.nocookie.net/pokemon/images/5/53/132Ditto_OS_anime_2.png/revision/latest?cb=20140318031545"
-    },
-    {
-      "id": "11",
-      "title": "Midnight Club",
+      "id": "1",
+      "title": "The Address \"Hottest Night Club\"",
       "author": "Shanton Waldien",
-      "image": "https://png.icons8.com/ios/1600/add.png",
-      "description": ""
+      "image": "https://www.theaddressclub.co.za/images/gallery/2017/the-address-club15.jpg",
+      "description": "lorem"
     },
     {
-      "id": "12",
-      "title": "Jason",
+      "id": "1",
+      "title": "The Address \"Hottest Night Club\"",
       "author": "Shanton Waldien",
-      "image": "https://png.icons8.com/ios/1600/add.png",
-      "description": ""
+      "image": "https://www.theaddressclub.co.za/images/gallery/2017/the-address-club27.jpg",
+      "description": "lorem"
+    },
+    {
+      "id": "1",
+      "title": "The Address \"Hottest Night Club\"",
+      "author": "Shanton Waldien",
+      "image": "https://www.theaddressclub.co.za/images/gallery/2017/the-address-club18.jpg",
+      "description": "lorem"
     }
   ]
 }

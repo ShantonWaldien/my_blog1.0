@@ -58,6 +58,18 @@
             overflow: hidden;
         }
 
+        .navbar {
+            background: black !important;
+        }
+
+        .navbar-nav  li a:hover {
+            color: white !important;
+        }
+
+        .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand {
+            color: white !important;
+        }
+
         
     </style>
 
@@ -76,7 +88,7 @@
 
         <h2>To</h2>
 
-        <h1 style="letter-spacing: 10px !important;font-family: 'Denk One', sans-serif !important;">Midnight Club</h1>
+        <h1 class="mid" style="letter-spacing: 10px !important;font-family: 'Denk One', sans-serif !important;">Midnight Club</h1>
 
     </div> 
 
@@ -117,140 +129,6 @@
         <p>All rights reserved 2018 | Shanton.</p>
 
     </div>
-
-    
-
-    
-
-<!-- <div class="container">
-    <div class="panel panel-danger">
-      <div class="panel panel-heading text-center">
-          <h1>It's Hero Time.</h1>
-      </div>
-      <div class="panel-body" id="all">
-
-          <a href="/create ">
-              <div class="col-xs-6 col-md-2">
-                  <div class="panel panel-default">
-                      <div class="panel-body">
-                          <img src="https://png.icons8.com/ios/1600/add.png">
-                      </div>
-                      <div class="panel-footer">
-                          New pokemon
-                      </div>
-                  </div>
-              </div> 
-          </a>
-
-      </div>
-
-      <div class="container">
-            <div class="panel panel-danger">
-                <div class="panel panel-heading text-center">
-                    <h3 class="text-center"></h3>
-                </div>
-                <div class="panel-body" id="all">
-    
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-                            <img src="">
-                        </div>
-                        <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-                            <br>
-                            <a href="/update" class="btn btn-block btn-primary">Update</a>
-                            <br>
-                            <a href="/delete" class="btn btn-block btn-danger">Delete</a>
-                        </div>
-                    </div>  
-    
-                </div>
-                <div class="panel-footer text-center">
-                    <p>All rights reserved 2018 | Nate.</p>
-                </div>
-            </div>
-        </div>
-      <div class="panel-footer text-center">
-          <p>All rights reserved 2018 | Nate.</p>
-      </div>
-  </div>
-</div> -->
-
-<!-- <script src="js/ejs.min.js"></script> -->
-<!-- <script>
-
-  //the url we are making a request to
-  var url = "http://localhost:8000/pokemon";
-
-  $.ajax({
-      url: url,
-      method: 'get',
-      success: function(data){
-          //do something when call is successful
-          // console.log(data);
-          let pokemon = data;
-          
-          // With jQuery:
-        //   $('#all').html(html);
-          // Vanilla JS:
-          var html= document.getElementById('all').innerHTML;
-      }, 
-      error: function(error){
-          console.log(error);
-      }
-  });
-
-</script>
-
-<script>
-
-  //targeting my container
-  var box = document.getElementById('all');
-
-  //the url we are making a request to
-  var url = "http://localhost:8000/pokemon";
-
-  $.ajax({
-      url: url,
-      method: 'get',
-      success: function(data){
-        //   do something when call is successful
-          console.log(data);
-
-          $.each(data, function(index, value){
-
-              var container = document.createElement('div');
-              container.className = 'col-xs-6 col-md-2';
-
-              var panel = document.createElement('div');
-              panel.className = 'panel panel-default';
-
-              var body = document.createElement('div');
-              body.className = "panel-body";
-
-              var footer = document.createElement('div');
-              footer.className = 'panel-footer';
-
-              var image = document.createElement('IMG');
-              image.setAttribute('src', value.image);
-
-              var name = document.createTextNode(value.name);
-
-              footer.appendChild(name);
-              body.appendChild(image);
-              panel.appendChild(body);
-              panel.appendChild(footer);
-              container.appendChild(panel);
-
-              box.appendChild(container);
-              
-          });
-
-      }, 
-      error: function(error){
-          console.log(error);
-      }
-  });
-</script> -->
 
 </body>
 <% include partials/script %>

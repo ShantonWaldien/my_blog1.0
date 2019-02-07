@@ -19,6 +19,10 @@ router.get('/archive', function(req, res, next) {
   res.render('archive', {page:'archive', menuId:'archive'});
 });
 
+router.get('/view', function(req, res, next) {
+  res.render('view', {page:'archive', menuId:'view'});
+});
+
 
 router.get('/', function (req, res, next) {
 

@@ -10,9 +10,24 @@
     <style>
         body { padding-top:15px; background-color: #ccc;}
         img { width: 100%;}
+
+        .navbar {
+            background: black !important;
+        }
+
+        .navbar-nav  li a:hover {
+            color: white !important;
+        }
+
+        .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand {
+            color: white !important;
+        }
     </style>
 </head>
 <body>
+
+    <!-- Navbar -->
+<% include partials/menu.ejs %>
 
     <div class="container">
         <div class="panel panel-danger">
@@ -35,7 +50,7 @@
 
             </div>
             <div class="panel-footer text-center">
-                <p>All rights reserved 2018 | Nate.</p>
+                <p>All rights reserved 2018 | Shanton.</p>
             </div>
         </div>
     </div>
