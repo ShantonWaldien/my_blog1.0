@@ -16,22 +16,8 @@
  
 </head>
 <body>
+    <!-- Navbar -->
 <% include partials/menu.ejs %>
-<!-- <div class="container-fluid bg-3 text-center">     -->
-  <!-- <h3><%= page %></h3><br> -->
-  <!-- <div class="row">
-    <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      
-    </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-  </div>
-</div> -->
 
 <div class="container">
     <div class="panel panel-danger">
@@ -99,7 +85,7 @@
           $.each(data, function(index, value){
 
               var container = document.createElement('div');
-              container.className = 'col-xs-6 col-md-2';
+              container.className = 'col-xs-6 col-md-5';
 
               var panel = document.createElement('div');
               panel.className = 'panel panel-default';
@@ -113,11 +99,13 @@
               var image = document.createElement('IMG');
               image.setAttribute('src', value.image);
 
-              var name = document.createTextNode(value.name);
+              var title = document.createTextNode(value.title);
               
-              var description = document.createTextNode(value.description)
+              var author = document.createTextNode(value.author);
+              var description = document.createTextNode(value.description);
 
-              footer.appendChild(name);
+              body.appendChild(title);
+              footer.appendChild(author);
               footer.appendChild(description);
               body.appendChild(image);
               panel.appendChild(body);

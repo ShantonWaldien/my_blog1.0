@@ -22,7 +22,8 @@ router.post('/', function(req, res, next) {
     method: "POST",
     form: {
         id: id,
-        name: req.body.name,
+        title: req.body.title,
+        author: req.body.author,
         image: req.body.image_url,
         description: req.body.description,
     }
