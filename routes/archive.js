@@ -24,7 +24,7 @@ router.get('/', function (req, res, next) {
 
   let data = {
       title: 'All Posts',
-      posts: Posts, 
+      posts: posts, 
       message: false,
   }
 
