@@ -27,8 +27,8 @@ router.get('/view', function(req, res, next) {
 router.get('/', function (req, res, next) {
 
   let data = {
-      title: 'All Pokemon',
-      pokemon: Pokemon, 
+      title: 'All Posts',
+      posts: Posts, 
       message: false,
   }
 
