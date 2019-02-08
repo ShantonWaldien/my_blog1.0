@@ -17,13 +17,13 @@
 
 =============
 
-- Node.js
-- Json
-- jQuery
-- JavaScript
+- Open repository in editor of choice
+- Open a new terminal and run "nodemon start"  (Open browser and type in url: localhost:3000 , this is to open the web application)
+- Then open a new terminal and run "json-server --watch db.json -p 8000"  (Open browser and type in url: localhost:8000/posts, you listen on a different port so that your db.json doesnt clash)
 
 =============
 
+- If you dont have nodemon installed you need to first run the install command " npm install -g nodemon " before you can run "nodemon start"
 
 
 # Live Link 
