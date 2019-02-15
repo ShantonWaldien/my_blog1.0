@@ -1,20 +1,12 @@
 # personal_blog
-Creating app which allows a user to post blogs about interesting topics.
+Building a Blog Website using CRUD.
 
 ---
-##functionality
-- The user must be able to create, update and delete a blog post.
-- The user must register/sign up before being able to create a blog post.
-- Data must be stored in a cookie.
-- db.json file must be used to store blog posts.
----
-
-
----
-## About Project
-- We are Learning about Crud Applications using JSON servers.
-- We will be running a JSON server that will populate JSON Objects and properties via a port.
-- Follow the Guidelines below to have your server running locally also.
+## Project Brief
+- Blog should be highly visual
+- Users must first sign in to be able to do certain actions.
+- Users should be able to create, edit, view and delete blog posts.
+- Posts should have a title, author, image and description.
 ---
 
 ---
@@ -42,19 +34,18 @@ Creating app which allows a user to post blogs about interesting topics.
 ---
 
 ## Running the tests
-- Run the JSON server by running json-server --watch db.json
+- Run the JSON server by running "json-server --watch db.json -p 8000"
+- Run the command "nodemon start"  
 
 ## Built with
 - VSCode
 - Terminal/Command Line
 - Node JS
 ---
-## Resources used: 
-- w3schools
-- stack overflow
-- lecturers credited: Nate, Garth & Devan
----
-## Contributers
-Jayson Manas
 
-This is the live link to my web application:
+## Live Link
+
+- http://myblog-blogsw.1d35.starter-us-east-1.openshiftapps.com/
+
+## Contributers
+Shanton
