@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="stylesheets/css/sign_register.css">
+  </head>
+  <body>
+    <main>
+      <!-- the sign up form -->
+      <form class="sign_up" method="post">
+        <h2>Become a Member!</h2>
+        <p><%= regError %></p>
+        <h3>Username</h3>
+        <input type="text" name="username" value="" required>
+        <h3>Email</h3>
+        <input type="text" name="email" value="" required>
+        <h3>Password</h3>
+        <input type="" name="password" value="" required style>
+        <br>
+        <span><input type="checkbox" name="" value="" id="check" checked>Allow for Newsfeeds</span>
+
+        <button type="submit" name="submit"><p>submit</p></button>
+        <p>Already a Member?</p>
+        <a href="/sign_in"><p>Sign In Here!</p></a>
+        <a href="/"><p>Home</p></a>
+      </form>
+    </main>
+  </body>
+</html>

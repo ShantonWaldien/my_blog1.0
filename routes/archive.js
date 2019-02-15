@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+var Pokemon = require('../db.json');
+
 
 /* GET home page. */
 // router.get('/', function(req, res, next) {
@@ -7,13 +9,13 @@ var router = express.Router();
 // });
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', {page:'Home', menuId:'home'});
-});
+// router.get('/', function(req, res, next) {
+//   res.render('index', {page:'Home', menuId:'home'});
+// });
 
-router.get('/create', function(req, res, next) {
-  res.render('create', {page:'create', menuId:'create'});
-});
+// router.get('/create', function(req, res, next) {
+//   res.render('create', {page:'create', menuId:'create'});
+// });
 
 router.get('/archive', function(req, res, next) {
   res.render('archive', {page:'archive', menuId:'archive'});
@@ -23,12 +25,12 @@ router.get('/archive', function(req, res, next) {
 router.get('/', function (req, res, next) {
 
   let data = {
-      title: 'All Posts',
-      posts: posts, 
+      title: 'All Pokemon',
+      pokemon: Pokemon, 
       message: false,
   }
 
-  res.render('index', data);
+  res.render('archive', data);
 
 });
 module.exports = router;

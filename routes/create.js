@@ -14,21 +14,21 @@ router.post('/', function(req, res, next) {
     // res.send(req.body);
 
     //set a new dynamic id
-    var id = Pokemon.posts.length+=1;
+    var id = Pokemon.pokemon.lenght;
 
     //make a post request to our database
     request({
-    url: "http://localhost:8000/posts",
+    url: "http://localhost:8000/pokemon",
     method: "POST",
     form: {
         id: id,
-        title: req.body.title,
-        author: req.body.author,
+        name: req.body.name,
         image: req.body.image_url,
-        description: req.body.description,
+        description: req.body.editordata,
+
     }
     }, function(error, response, body) {
-        console.log(body);
+        // console.log(body);
         //send a response message
         res.render('create', {message: 'Successfully Added.'});
     });

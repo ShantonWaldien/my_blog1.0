@@ -1,39 +1,60 @@
 var express = require('express');
 var router = express.Router();
 
+var Pokemon = require('../db.json');
+
 /* GET home page. */
 // router.get('/', function(req, res, next) {
-//   res.render('index', { title: 'Express' });
+//   res.render('index', {title: "All Pokemon"});
+
 // });
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', {page:'Home', menuId:'home'});
-});
-
-router.get('/create', function(req, res, next) {
-  res.render('create', {page:'create', menuId:'create'});
-});
-
-router.get('/archive', function(req, res, next) {
-  res.render('archive', {page:'archive', menuId:'archive'});
-});
-
-router.get('/view', function(req, res, next) {
-  res.render('view', {page:'archive', menuId:'view'});
-});
 
 
 router.get('/', function (req, res, next) {
 
-  let data = {
-      title: 'All Posts',
-      posts: Posts, 
-      message: false,
+    let data = {      
+        title: 'Featured Posts',
+        pokemon : Pokemon, 
+        message: false,
+        
+        
+    }
+     // checks if there is a user verification cookie
+  if (req.cookies.userId !== undefined){
+    // var to find index
+    var id;
+    var users = Pokemon.users;
+    // loop to find index
+    for(var i = 0; i < users.length; i++){
+      if (users[i].id == req.cookies.userId){
+        id = i;
+      }
+    }
+
+    // sets login variables
+    req.app.locals.user = users[id].username;
+    req.app.locals.logedIn = true;
   }
 
-  res.render('index', data);
+  if (req.cookies.cookieWarning !== undefined){
+    req.app.locals.cookieWarning = true;
+    // for developement
+    req.app.locals.cookieWarning = false;
+    res.clearCookie('cookieWarning');
+  }
+
+    res.render('index', data);
 
 });
+
+// for cookie
+router.post('/',function(req,res,next){
+    res.cookie('cookieWarning','we gave cookies');
+    res.redirect('/');
+  })
+  
+
 module.exports = router;
 
+////////////////////

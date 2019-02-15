@@ -8,51 +8,58 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
     <style>
-        body { padding-top:15px; background-color: #ccc;}
-        img { width: 100%;}
 
-        .navbar {
-            background: black !important;
+        body { 
+            padding-top:15px; 
+            background-color: #222222;
         }
 
-        .navbar-nav  li a:hover {
-            color: white !important;
+        img {
+            width: 100% !important;
         }
-
-        .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand {
-            color: white !important;
+        
+        .post_view{
+            padding: 1em;
+            margin: 1em;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
-<% include partials/menu.ejs %>
-
     <div class="container">
-        <div class="panel" style="margin: 200px 0 0 0 !important;">
-            <div class="panel panel-heading text-center">
-                <h3 class="text-center"></h3>
+        <div class="panel panel-danger">
+            <div class="text-center text-white bg-dark">
+                <h2 class="text-center"><%= poke.name %></h2>
             </div>
+            <a href="/archive" class="btn btn-block">BACK TO ARCHIVE</a>
+
             <div class="panel-body" id="all">
 
                 <div class="row">
-                    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-                        <img src="">
+                    <div class="post_view">
+                        <img src="<%= poke.image %>">
                     </div>
+                    <div class="post_view">
+                            <%-poke.description %>
+                        </div>
                     <div class="col-xs-12 col-sm-4 col-sm-offset-4">
                         <br>
-                        <a href="/update" class="btn btn-block btn-success">Update</a>
+                <% if(logedIn == true){%>
+
+                        <a href="/update/<%= poke.id %>" class="btn btn-block btn-primary">Update</a>
                         <br>
-                        <a href="/delete" class="btn btn-block btn-success">Delete</a>
+                        <a href="/delete/<%= poke.id %>" class="btn btn-block btn-danger">Delete</a>
+                        <%}else{%>
+                            <p class="logged_out">Please <a href="/sign_in">Log In</a> before attempting to create a post!</p>
+                          <%} %>
+                          
                     </div>
                 </div>  
 
             </div>
             <div class="panel-footer text-center">
-
-                <p>All rights reserved 2018 | Shanton.</p>
-
+                <p>All rights reserved 2018 | ShantonWaldien.</p>
             </div>
         </div>
     </div>

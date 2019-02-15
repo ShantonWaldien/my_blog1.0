@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-// var Pokemon = require('../db.json');
+var Pokemon = require('../db.json');
 var request = require("request");
 
 /* GET create page. */
@@ -8,7 +8,7 @@ router.get('/:pokeId', function(req, res, next) {
 
     //make a post request to our database
     request({
-    url: "http://localhost:8000/posts/" + req.params.pokeId,
+    url: "http://localhost:8000/pokemon/" + req.params.pokeId,
     method: "GET",
     }, function(error, response, body) {
         console.log(JSON.parse(body));
@@ -23,11 +23,13 @@ router.post('/:pokeId', function(req, res, next) {
     // console.log(req.body)
     //make a post request to our database
     request({
-    url: "http://localhost:8000/posts/"+ req.params.pokeId,
+    url: "http://localhost:8000/pokemon/"+ req.params.pokeId,
     method: "PATCH",
     form: {
         name: req.body.name,
         image: req.body.image_url,
+        description: req.body.editordata,
+
     }
     }, function(error, response, body) {
         // console.log(body);

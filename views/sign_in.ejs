@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="stylesheets/css/sign_register.css">
+  </head>
+  <body>
+    <main>
+      <!-- the sign in form -->
+      <form  method="post">
+        <h2>Sign In Here!</h2>
+        <p><%= signError %></p>
+        <h3>Username or Email</h3>
+        <input type="text" name="username" value="" required>
+        <h3>Password</h3>
+        <input type="password" name="password" value="" required>
+        <button type="submit" name="submit"><p>Log In</p></button>
+        <%if (logedIn == false){%>
+          <p>Not Registered Yet?</p>
+          <a href="/register"><p>Become a Member!</p></a>
+          <%}%>
+        <a href="/"><p>Home</p></a>
+      </form>
+    </main>
+  </body>
+</html>

@@ -1,39 +1,30 @@
 {
-  "posts": [
+  "pokemon": [
     {
-      "id": "1",
-      "title": "The Address \"Hottest Night Club\"",
-      "author": "Shanton Waldien",
-      "image": "https://www.theaddressclub.co.za/images/gallery/2017/the-address-club15.jpg",
-      "description": "The Address is one of Cape Towns top nightclubs and is currently trending and has a lot of hype around it."
+      "name": "The Address",
+      "image": "https://www.theaddressclub.co.za/images/gallery/2017/the-address-club21.jpg",
+      "description": "<p>Hello World</p>",
+      "id": 1
     },
     {
-      "id": "1",
-      "title": "The Address \"Hottest Night Club\"",
-      "author": "Shanton Waldien",
-      "image": "https://www.theaddressclub.co.za/images/gallery/2017/the-address-club27.jpg",
-      "description": "The Address is one of Cape Towns top nightclubs and is currently trending and has a lot of hype around it."
-    },
-    {
-      "id": "1",
-      "title": "The Address \"Hottest Night Club\"",
-      "author": "Shanton Waldien",
+      "name": "The Address",
       "image": "https://www.theaddressclub.co.za/images/gallery/2017/the-address-club18.jpg",
-      "description": "The Address is one of Cape Towns top nightclubs and is currently trending and has a lot of hype around it."
+      "description": "<p>Hello World</p>",
+      "id": 2
     },
     {
-      "id": "4",
-      "title": "",
-      "author": "",
-      "image": "",
-      "description": ""
-    },
+      "name": "The Address",
+      "image": "https://www.theaddressclub.co.za/images/gallery/2017/the-address-club20.jpg",
+      "description": "<p>Hello World</p>",
+      "id": 3
+    }
+  ],
+  "users": [
     {
-      "id": "5",
-      "title": "shanton",
-      "author": "Shanton Waldien",
-      "image": "https://www.theaddressclub.co.za/images/gallery/2017/the-address-club18.jpg",
-      "description": ""
+      "id": "1",
+      "username": "Shanton",
+      "email": "waldienshanton@gmail.com",
+      "password": "shanton123"
     }
   ]
 }

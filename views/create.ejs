@@ -2,42 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Create | Midnight Club</title>
+    <title>Hero App | New</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./stylesheets/style.css">
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Denk+One|Roboto" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- include libraries(jQuery, bootstrap) -->
 
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> 
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
-    <link href="https://fonts.googleapis.com/css?family=Staatliches|Ubuntu" rel="stylesheet">
 
-    <!-- include summernote css/js -->
+    <!-- Summernote css and js -->
+
     <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.css" rel="stylesheet">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js"></script>
+    
+    <% include partials/head.ejs %>
 
     <style>
 
-        .create-container {
-            height: 100vh;
-            background-image: url('https://images.pexels.com/photos/801863/pexels-photo-801863.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-            background-size: cover;
-            background-attachment: fixed;
-            background-color: grey !important;
-            background-blend-mode: multiply !important;
-            background-position-y: -200px !important;
+        body {
+            padding: 200px 0;
         }
 
-        label {
-            color: white !important;
-        }
-
-        .heading {
-            color: white !important;
+        h1, label {
+            color: white;
         }
 
         .navbar {
             background: black !important;
+            border: none !important;
         }
 
         .navbar-nav  li a:hover {
@@ -53,94 +52,90 @@
 </head>
 <body>
 
-    <!-- Navbar -->
+    <% include partials/menu.ejs %>
 
-    <% include ./partials/menu %>
+    <div class="container">
 
-    <div class="create-container" style="padding: 130px 0 !important;">
+        <div>
 
-        <div class="container" >
+            <div class="text-center text-white bg-dark">
 
-            <div class="panel-dark" >
-
-                <div class="panel-heading text-center">
-
-                    <h1 class="heading">Add a New Post</h1>
-
-                </div>
-
-                <div class="panel-body" id="all">
-            
-                    <form method="POST" action="">
-
-                        <div class="form-group col-xs-12 col-sm-13 col-sm-offset-0">
-
-                            <label for="exampleInputName">Title</label>
-
-                            <input type="text" class="form-control" id="exampleInputName" aria-describedby="heroName" placeholder="Enter Title" name="title">
-
-                        </div>
-
-                        <div class="form-group col-xs-12 col-sm-13 col-sm-offset-0">
-
-                                <label for="exampleInputName">Author</label>
-        
-                                <input type="text" class="form-control" id="exampleInputName" aria-describedby="heroName" placeholder="Enter Author Name" name="author">
-        
-                            </div>
-
-                        <div class="form-group col-xs-12 col-sm-13 col-sm-offset-0">
-
-                            <label for="exampleInputURL">Image URL</label>
-
-                            <input type="text" class="form-control" id="exampleInputURL" placeholder="Enter link to image" name="image_url">
-
-                        </div>
-
-                        <div class="form-group col-xs-12 col-sm-13 col-sm-offset-0">
-
-                            <label for="exampleInputDescription">Content</label>
-
-                            <input type="text" class="form-control" id="summernote" placeholder="Link to description" name="description">
-
-                        </div>
-                        
-                        <div class="col-xs-12 col-sm-13 col-sm-offset-0">
-
-                            <button type="submit" class="btn btn-secondary btn-block">+ Add Post</button>
-                        </div>
-
-
-                    </form>
-
-                </div>
+                <h1>Create A New Post</h1>
 
             </div>
 
-            <!-- Footer -->
+            <div class="panel-body" id="all">
 
-            <div class="text-center" style="color: #1abc9c !important; padding: 20px 0 0 0!important">
+                <% if (message) { %>
 
-                <p>All rights reserved 2018 | Shanton.</p>
-    
+                <div class="alert alert-success" role="alert">
+
+                    <%= message %>
+
+                </div>
+
+                <% } %> 
+
+                <% if(logedIn == true){%>
+
+                <form method="POST" action="">
+
+                    <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+
+                        <label for="exampleInputName">Title</label>
+
+                        <input type="text" class="form-control" id="exampleInputName" aria-describedby="heroName" placeholder="Enter Title of Post" name="name">
+
+                        <!-- <small id=heroName" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+
+                    </div>
+
+                    <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+
+                        <label for="exampleInputURL">Add Image</label>
+
+                        <input type="text" class="form-control" id="exampleInputURL" placeholder="Image URL goes here" name="image_url">
+
+                    </div>
+
+                    <div class="form-group col-xs-12 col-sm-6 col-sm-offset-3">
+
+                            <label for="exampleInputDescription">Description</label>
+
+                            <textarea id="summernote" name="editordata"></textarea>
+
+                        </div>
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+
+                        <button type="submit" class="btn btn-success btn-block">Add Hero</button>
+
+                    </div>
+
+                </form>
+
             </div>
 
+            <%}else{%>
+
+                <p class="logged_out">Please <a href="/sign_in">Log In</a> before attempting to create a post!</p>
+
+            <%} %>
+
+            <div class="panel-footer text-center">
+
+                <p>All rights reserved 2018 | ShantonWaldien.</p>
+
+            </div>
         </div>
-        
     </div>
-    
-</body>
-
 <script>
-
-    $('#summernote').summernote({
-        placeholder: 'Enter Content',
-        tabsize: 3,
-        height: 150
-    });
-        
+// $('#summernote').summernote({
+//   height: 300,                 // set editor height
+//   minHeight: null,             // set minimum height of editor
+//   maxHeight: null,             // set maximum height of editor
+//   focus: true                  // set focus to editable area after initializing summernote
+// });
+var markupStr = $('#summernote').summernote('code');
 </script>
-
-<% include partials/script %>
-
+</body>
 </html>

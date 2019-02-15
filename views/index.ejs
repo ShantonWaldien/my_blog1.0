@@ -3,63 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Home | Midnight Club</title>
+    
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Staatliches|Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./stylesheets/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Denk+One|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
 
     <style>
 
-        .landing {
-            height: 60vh;
+        .landing-page {
+            height: 80vh;
             background-image: url('https://images.pexels.com/photos/801863/pexels-photo-801863.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
             background-size: cover;
             background-attachment: fixed;
             background-color: grey !important;
             background-blend-mode: multiply !important;
-            background-position-y: -200px !important;
+            background-position-y: -100px !important;
+            text-align: center;
+            padding: 190px 0 !important;
+            color: white;
         }
 
         body { 
-            padding: 0 !important; 
-            background-color: red;
-            font-family: 'Roboto', sans-serif !important; 
+            padding-top:15px; 
+            background-color: white !important;
+            padding: 0 !important;
+            font-family: 'Roboto', sans-serif !important;
         }
 
-        img {
+        img { 
             width: 100%;
-        }
-
-        h1 {
-            color: White !important;
-            letter-spacing: 7px !important;
-            font-size: 50px !important;
-        }
-
-        h2 {
-            color: white !important;
-            font-size: 30px !important;
-            letter-spacing: 7px !important;
-        }
-
-        .container-fluid {
-            padding: 200px 0 !important;
-        }
-
-        img:hover {
-            transform: scale(1.1);
-            transition: all 2s;
-        }
-        
-
-        .col-sm-4 {
-            overflow: hidden;
+            height: 30em;
         }
 
         .navbar {
             background: black !important;
+            border: none !important;
         }
 
         .navbar-nav  li a:hover {
@@ -70,71 +54,141 @@
             color: white !important;
         }
 
-        p {
-            font-size: 20px;
-            padding: 30px 0;
+        .container {
+            text-align: center !important;
         }
 
+        h2 {
+            color: black !important;
+        }
+
+        .text-center {
+            margin: 20px 0;
+        }
+
+        .content-container {
+            width: auto !important;
+        }
+
+        .post-text {
+            text-decoration: none !important;
+            color: black !important;
+        }
+
+        .panel-body {
+            text-align: left;
+            padding: 0 0 10px 0 !important;
+        }
+
+        .read-more {
+            text-align: center;
+        }
         
     </style>
 
-    <% include partials/head %> 
+    <% include partials/head.ejs %>
 
 </head>
 <body>
 
-    <% include partials/menu %>
+    <% include partials/menu.ejs %>
 
-    <!-- Landing Page  -->
+    <div class="landing-page">
 
-    <div class="container-fluid bg-3 text-center landing">  
+        <h1 style="letter-spacing: 8px !important">WELCOME</h1>
 
-        <h1 class="welcome">Welcome</h1>
+        <h1 style="letter-spacing: 8px !important; padding: 20px 0 !important;">TO</h1>
 
-        <h2>To</h2>
+        <h1 style="font-family: 'Denk One', sans-serif !important; letter-spacing: 8px !important; padding: 20px 0 !important;">MIDNIGHT CLUB</h1>
 
-        <h1 class="mid" style="letter-spacing: 10px !important;font-family: 'Denk One', sans-serif !important;">Midnight Club</h1>
-
-    </div> 
-
-    <!-- Featured Posts -->
-
-    <h1 style="color: black !important; text-align: center !important;font-size: 30px !important;letter-spacing: 0px !important;">Featured Posts</h1>
-    
-
-    <div class="col-sm-4 col-centered" style="padding: 10px;">
-
-        <img src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
-
-        <p>The Address is one of Cape Towns top nightclubs and is currently trending and has a lot of hype around it.</p>
-        
     </div>
 
-    <div class="col-sm-4 col-centered" style="padding: 10px;">
+    <% if (title) { %>
 
-        <img src="https://images.pexels.com/photos/1449795/pexels-photo-1449795.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
-        
-        <p>The Address is one of Cape Towns top nightclubs and is currently trending and has a lot of hype around it.</p>
-            
-    </div>
+        <h2 class="text-center"><%= title %></h2>
 
-    <div class="col-sm-4 col-centered" style="padding: 10px;">
+    <% } %>
 
-        <img src="https://images.pexels.com/photos/1047940/pexels-photo-1047940.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
-            
-        <p>The Address is one of Cape Towns top nightclubs and is currently trending and has a lot of hype around it.</p>
+    <div class="container content-container">
+
+        <div class="panel">
+
+            <div class="panel-body" id="all">
+
+                <% if (message) { %>
+
+                    <div class="alert alert-success" role="alert">
+
+                        <%= message %>
+
+                    </div>
+
+                <% } %> 
                 
-    </div>
 
+                
 
-    <!-- Footer -->
+                <% pokemon.pokemon.forEach(function(poke){ %>
 
-    <div class="text-center" style="color: black !important;">
+                    <a href="/view/<%-poke.id %>" class="post-text">
 
-        <p>All rights reserved 2018 | Shanton.</p>
+                        <div class="col-md-4 col-md-4">
 
+                            <div class="">
+
+                                <div class="panel-body">
+
+                                    <%-poke.name %>
+
+                                    <img src="<%-poke.image %>">
+
+                                </div>
+
+                                <div class="read-more">
+
+                                    <button type="button" class="btn">Read More</button>
+
+                                </div>
+
+                            </div>
+
+                        </div> 
+
+                    </a>
+
+                <% }); %>   
+
+                <!-- <a href="/create">
+
+                    <div class="col-md-4 col-md-4 col-md-2">
+
+                        <div class="panel panel-default">
+
+                            <div class="panel-body">
+
+                                <img src="https://png.icons8.com/ios/1600/add.png">
+
+                            </div>
+
+                            <div class="panel-footer">
+                                New post
+                            </div>
+
+                        </div>
+                    </div> 
+                </a> -->
+
+            </div>
+
+            <!-- if there is no cookie show this -->
+       
+            <div class="text-center">
+
+                <p>All rights reserved 2018 | ShantonWaldien.</p>
+
+            </div>
+        </div>
     </div>
 
 </body>
-<% include partials/script %>
 </html>
