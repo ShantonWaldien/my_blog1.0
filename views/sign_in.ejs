@@ -17,6 +17,7 @@
       body{
         font-family: 'Roboto', sans-serif !important;
         text-align: center;
+        padding: 100px 0;
       }
 
       .navbar {
@@ -30,6 +31,10 @@
 
       .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand {
         color: white !important;
+      }
+      
+      * {
+        color: white;
       }
 
     </style>
@@ -55,7 +60,7 @@
 
         <input type="password" class="form-control" name="password" value="" required>
 
-        <button type="submit" name="submit" class="btn"><p>Log In</p></button>
+        <button type="submit" name="submit" class="btn" style="color: black; margin: 10px 0;">Sign In</button>
 
         <%if (logedIn == false){%>
 
