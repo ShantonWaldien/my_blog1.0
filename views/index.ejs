@@ -31,9 +31,9 @@
 
         body { 
             padding-top:15px; 
-            background-color: white !important;
             padding: 0 !important;
             font-family: 'Roboto', sans-serif !important;
+            color: white !important;
         }
 
         img { 
@@ -58,10 +58,6 @@
             text-align: center !important;
         }
 
-        h2 {
-            color: black !important;
-        }
-
         .text-center {
             margin: 20px 0;
         }
@@ -82,6 +78,16 @@
 
         .read-more {
             text-align: center;
+            color: black;
+            margin: 10px 0;
+        }
+
+        * {
+            color: white;
+        }
+
+        p {
+            color: grey;
         }
         
     </style>
@@ -111,7 +117,7 @@
 
     <div class="container content-container">
 
-        <div class="panel">
+        <div class="">
 
             <div class="panel-body" id="all">
 
@@ -136,11 +142,12 @@
 
                             <div class="">
 
-                                <div class="panel-body">
+                                <div class="">
 
-                                    <%-poke.name %>
+                                    <h2><%-poke.name %></h2>
+                                    <p><%-poke.author %></p>
 
-                                    <img src="<%-poke.image %>">
+                                    <img src="<%-poke.image %>" style="padding: 10px 0 0 0;">
 
                                 </div>
 
@@ -182,9 +189,9 @@
 
             <!-- if there is no cookie show this -->
        
-            <div class="text-center">
+            <div class="text-center" >
 
-                <p>All rights reserved 2018 | ShantonWaldien.</p>
+                <p style="color:white !important;">All rights reserved 2018 | ShantonWaldien.</p>
 
             </div>
         </div>

@@ -6,12 +6,14 @@
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <style>
 
         body { 
             padding-top:15px; 
             background-color: #222222;
+            color: white;
         }
 
         img {
@@ -19,47 +21,70 @@
         }
         
         .post_view{
-            padding: 1em;
-            margin: 1em;
-            text-align: center;
+            padding: 0 0 1em 0;
+            text-align: left;
         }
+
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="panel panel-danger">
-            <div class="text-center text-white bg-dark">
-                <h2 class="text-center"><%= poke.name %></h2>
+
+        <div class="">
+
+            <a href="/archive" class="btn btn-block" style="color:grey;">BACK TO ARCHIVE</a>
+
+            <div class="text-left text-white bg-dark">
+
+                <h2 class="text-left"><%= poke.name %></h2>
+                
+                <p style="color: grey;"><%= poke.author %></p>
+
             </div>
-            <a href="/archive" class="btn btn-block">BACK TO ARCHIVE</a>
+
+            
 
             <div class="panel-body" id="all">
 
                 <div class="row">
-                    <div class="post_view">
-                        <img src="<%= poke.image %>">
-                    </div>
-                    <div class="post_view">
-                            <%-poke.description %>
-                        </div>
-                    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-                        <br>
-                <% if(logedIn == true){%>
 
-                        <a href="/update/<%= poke.id %>" class="btn btn-block btn-primary">Update</a>
+                    <div class="post_view">
+
+                        <img src="<%= poke.image %>">
+
+                    </div>
+
+                    <div class="post_view text-left">
+
+                        <%-poke.description %>
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+
                         <br>
-                        <a href="/delete/<%= poke.id %>" class="btn btn-block btn-danger">Delete</a>
+
+                        <% if(logedIn == true){%>
+
+                        <a href="/update/<%= poke.id %>" class="btn btn-block btn-primary" style="background: black; border: 1px solid grey;">Update</a>
+                        <br>
+                        <a href="/delete/<%= poke.id %>" class="btn btn-block btn-danger" style="background: black; border: 1px solid grey;">Delete</a>
                         <%}else{%>
-                            <p class="logged_out">Please <a href="/sign_in">Log In</a> before attempting to create a post!</p>
-                          <%} %>
+
+                            <p class="logged_out text-center" style="color:grey"><a href="/sign_in" style="color: white">Log In</a> to create a new post.</p>
+
+                        <%} %>
                           
                     </div>
+
                 </div>  
 
             </div>
-            <div class="panel-footer text-center">
+            <div class="text-center">
+
                 <p>All rights reserved 2018 | ShantonWaldien.</p>
+
             </div>
         </div>
     </div>

@@ -13,28 +13,29 @@ var Pokemon = require('../db.json');
 
 router.get('/', function (req, res, next) {
 
-    let data = {      
-        title: 'Featured Posts',
-        pokemon : Pokemon, 
-        message: false,
-        
-        
-    }
-     // checks if there is a user verification cookie
-  if (req.cookies.userId !== undefined){
-    // var to find index
-    var id;
-    var users = Pokemon.users;
-    // loop to find index
-    for(var i = 0; i < users.length; i++){
-      if (users[i].id == req.cookies.userId){
-        id = i;
-      }
-    }
+  let data = {
 
-    // sets login variables
-    req.app.locals.user = users[id].username;
-    req.app.locals.logedIn = true;
+    title: 'Featured Posts',
+    pokemon : Pokemon, 
+    message: false,
+
+  }
+
+  // checks if there is a user verification cookie
+  if (req.cookies.userId !== undefined){
+  // var to find index
+  var id;
+  var users = Pokemon.users;
+  // loop to find index
+  for(var i = 0; i < users.length; i++){
+    if (users[i].id == req.cookies.userId){
+    id = i;
+  }
+  }
+
+  // sets login variables
+  req.app.locals.user = users[id].username;
+  req.app.locals.logedIn = true;
   }
 
   if (req.cookies.cookieWarning !== undefined){
@@ -52,7 +53,7 @@ router.get('/', function (req, res, next) {
 router.post('/',function(req,res,next){
     res.cookie('cookieWarning','we gave cookies');
     res.redirect('/');
-  })
+})
   
 
 module.exports = router;

@@ -2,20 +2,23 @@
   "pokemon": [
     {
       "name": "The Address",
-      "image": "https://www.theaddressclub.co.za/images/gallery/2017/the-address-club21.jpg",
+      "image": "https://www.theaddressclub.co.za/images/gallery/2017/the-address-club18.jpg",
       "description": "<p>Hello World</p>",
-      "id": 1
+      "author": "Shanton Waldien",
+      "id": 2
     },
     {
       "name": "The Address",
       "image": "https://www.theaddressclub.co.za/images/gallery/2017/the-address-club18.jpg",
       "description": "<p>Hello World</p>",
+      "author": "Shanton Waldien",
       "id": 2
     },
     {
       "name": "The Address",
       "image": "https://www.theaddressclub.co.za/images/gallery/2017/the-address-club20.jpg",
       "description": "<p>Hello World</p>",
+      "author": "Shanton Waldien",
       "id": 3
     }
   ],

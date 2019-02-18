@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Denk+One|Roboto" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
 
     <!-- include libraries(jQuery, bootstrap) -->
 
@@ -46,6 +48,14 @@
         .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand {
             color: white !important;
         }
+
+        * {
+            color: white;
+        }
+
+        button {
+            background: grey !important;
+        } 
 
     </style>
 
@@ -107,7 +117,7 @@
                         </div>
                     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
 
-                        <button type="submit" class="btn btn-success btn-block">Add Hero</button>
+                        <button type="submit" class="btn btn-dark btn-block">Create Post</button>
 
                     </div>
 
@@ -117,17 +127,20 @@
 
             <%}else{%>
 
-                <p class="logged_out">Please <a href="/sign_in">Log In</a> before attempting to create a post!</p>
+            <p class="logged_out" style="color: grey !important;"><a href="/sign_in" style="color: white !important;">Log In</a> to create a post.</p>
 
             <%} %>
 
-            <div class="panel-footer text-center">
+            <div class="text-center">
 
                 <p>All rights reserved 2018 | ShantonWaldien.</p>
 
             </div>
+
         </div>
+
     </div>
+
 <script>
 // $('#summernote').summernote({
 //   height: 300,                 // set editor height
